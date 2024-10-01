@@ -1,0 +1,58 @@
+дизъюнкция
+x y f
+0 0 0
+0 1 1
+1 0 1
+1 1 1
+
+конъюнкция
+x y f
+0 0 0
+0 1 0
+1 0 0
+1 1 1
+
+импликация
+x y f
+0 0 True
+0 1 True
+1 0 False
+1 1 True
+
+эквиваленция
+x y f
+0 0 True
+0 1 False
+1 0 False
+1 1 True
+
+f = (x <= (y and z)) or (not y)
+x y z f
+0 0 0 True
+0 0 1 True
+0 1 0 True
+0 1 1 True
+1 0 0 True
+1 0 1 True
+1 1 0 False
+1 1 1 True
+
+закон двойственности
+x y not(x and y) (not x) or (not y)
+0 0 True          True
+0 1 True          True
+1 0 True          True
+1 1 False          False
+
+Дистрибутивность дизъюнкции относительно конъюнкции
+x y z x or (y and z) (x or y) and (x or z)
+0 0 0 0              0
+0 0 1 0              0
+0 1 0 0              0
+0 1 1 1              1
+1 0 0 1              1
+1 0 1 1              1
+1 1 0 1              1
+1 1 1 1              1
+
+
